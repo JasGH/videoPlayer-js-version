@@ -1,5 +1,5 @@
 var player = videojs('videoPlayer', {
-	autoplay: 'muted',
+	autoplay: false,
 	controls: true,
 	poster: 'https://picsum.photos/800/450',
 	loop: false,
@@ -7,7 +7,7 @@ var player = videojs('videoPlayer', {
 	plugins: {
 		hotkeys: {
 			enableModifiersForNumbers: false,
-			seekStep: 30
+			seekStep: 5
 		}
 	}
 });
