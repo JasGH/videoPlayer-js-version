@@ -11,6 +11,32 @@ var player = videojs('videoPlayer', {
 		}
 	}
 });
+videojs(document.querySelector('video')).playlistUi();
+videojs(document.querySelector('video')).overlay();
+player.overlay({
+	overlays: [{
+   
+	  // This overlay will appear when a video is playing and disappear when
+	  // the player is paused.
+	  start: 'playing',
+	  end: 'pause'
+	}]
+  });
+
+  var player = videojs('my-video');
+
+  var chaptersArray = [
+        {label: 'Chapter 1', time: '5'},
+        {label: 'Chapter 2', time: '10'},
+        {label: 'Chapter 3', time: '15'}
+      ];
+
+  var chapterOptions = {
+        chapterType: 'horizontal',
+        chapters: chaptersArray
+      }
+
+player.chapters(chapterOptions);
 
 player.watermark({
 	file: 'https://picsum.photos/50/50',
@@ -47,6 +73,20 @@ player.playlist([
 
 player.playlist.autoadvance(0);
 
+
+
 player.rotate(player);
-
-
+player.newButtonToggle();
+// var Button = videojs.getComponent('Button');
+// var MyButton = videojs.extend(Button, {
+//   constructor: function() {
+//     Button.apply(this, arguments);
+//     /* initialize your button */
+//   },
+//   handleClick: function() {
+//     /* do something on click */
+//   }
+// });
+// videojs.registerComponent('MenuButton', MyButton);
+// var player = videojs('myvideo');
+// player.getChild('controlBar').addChild('myButton', {});

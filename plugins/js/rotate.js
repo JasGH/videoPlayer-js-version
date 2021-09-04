@@ -1,7 +1,7 @@
 function rotate(player) {
 	var dimension = 0;
 
-	var rotateLeftButton = createButton('&#8635;');
+	var rotateLeftButton = createButton('<i class="fa fa-bars" aria-hidden="true"></i>');
 	var rotateRightButton = createButton('&#8634;');
 
 	rotateLeftButton.onclick = function() {
